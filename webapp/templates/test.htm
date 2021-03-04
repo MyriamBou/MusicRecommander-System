@@ -1,0 +1,17 @@
+{% for name in artist %}
+<option type="checkbox" value = "{{ name }}" name="artistcheckbox" id ='name'>{{ name }}</option>
+
+<!-- <option>{{ name }} <input type="checkbox" name="artistcheckbox" value = "{{ name }}" id ='name'/></option> -->
+{% endfor %}
+
+
+def index():
+    
+    
+    <!--
+    artist= artist_data()
+    if request.method == 'POST':
+        print(request.form.getlist("artistcheckbox"))
+        return 'Done'
+    return render_template('index.html', artist = artist)
+    -->

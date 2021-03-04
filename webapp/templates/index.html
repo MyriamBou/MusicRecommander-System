@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script> </script>
+    <link rel="stylesheet" href='/static/style.css' />
+   
+    <title>Document</title>
+</head>
+<body>
+    <h1>Page1</h1> 
+    <form action="/page2" method="post">
+    <select id="multiselect" name="listArtist" multiple="multiple">
+        
+            {% for name in artist %}
+            <li><option type="checkbox" value = "{{ name }}" name="artistcheckbox" id ='name'>{{ name }}</option></li>
+
+        <!-- <option>{{ name }} <input type="checkbox" name="artistcheckbox" value = "{{ name }}" id ='name'/></option> -->
+        {% endfor %}
+
+       
+        
+    </select>
+   
+    <input type="submit" onclick="getSelectedValues()" class="btn btn-primary" value="Get recommendation">
+             
+</form> 
+
+    <script src="../static/script.js"></script>      
+</body>
+</html>
